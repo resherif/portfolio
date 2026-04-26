@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react';
 import heroImg from '../assets/formal img.jpg';
 const Hero = () => {
   return (
-      <header className="py-20 px-6 max-w-5xl mx-auto text-center flex items-center justify-center">
+      <header className=" py-20 px-6 max-w-5xl mx-auto mt-10 text-center flex items-center justify-center">
           <div>
          <img src={heroImg} alt="Reham Sherif" className="rounded-4xl h-100 object-cover mb-4" />
               

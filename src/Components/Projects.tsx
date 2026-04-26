@@ -10,11 +10,11 @@ const Projects = () => {
   )
   return (
     <section className="py-16 px-6 max-w-5xl mx-auto " id="Projects">
-        <div >
+        <div  className='flex justify-center items-center gap-6 ' >
         {categories.map((cat) => (
           <button
             key={cat.key}
-            className={` ${active === cat.key ?"bg-blue-600 text-white" : "bg-gray-200 text-gray-700"}`}
+            className={`p-4 bg-indigo-800/45 text-lg mb-10 rounded-2xl  ${active === cat.key ?"bg-blue-600 text-indigo-400" : "bg-gray-200 text-slate-900"}`}
             onClick={() => setActive(cat.key)}
           >
             {cat.label}
@@ -23,12 +23,12 @@ const Projects = () => {
       </div>
         <div className="grid md:grid-cols-2 gap-6">
           {visible.map((project) => (
-            <div key={project.title} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+            <div key={project.title} className="bg-indigo-800/20 p-6 rounded-xl shadow-sm  hover:shadow-md transition-shadow">
               <div className="flex justify-between items-start mb-4">
-                <span className="text-xs font-bold text-blue-600 uppercase tracking-tighter bg-blue-50 px-2 py-1 rounded">
+                <span className="text-xs font-bold text-blue-600 uppercase tracking-tighter text-indigo-700 px-2 py-1 rounded">
                   {project.projCategory}
                 </span>
-              <a href={project.github} target="_blank" rel="noopener noreferrer">   <ExternalLink size={18} className="text-slate-400"/></a>
+              <a href={project.github} target="_blank" rel="noopener noreferrer">   <ExternalLink size={24} className="text-indigo-800"/></a>
                 
               </div>
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
@@ -37,7 +37,7 @@ const Projects = () => {
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded-md font-bold">
+                  <span key={tag} className="text-[10px]  text-slate-900  px-2 py-1 rounded-md font-bold">
                     {tag}
                   </span>
                 ))}
@@ -45,7 +45,7 @@ const Projects = () => {
             </div>
           ))}
           </div>
-          <Skills />
+         
       </section>
   )
 }

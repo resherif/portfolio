@@ -22,34 +22,35 @@ const background = [
 
 export default function About() {
   return (
-    <section id="About" className="py-20 px-6 bg-slate-50">
+    <section id="About" className="py-20 px-6 ">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center text-slate-800">Education & Background</h2>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Education Column */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold flex items-center gap-2 mb-4 text-blue-600">
+            <h3 className="text-xl font-semibold flex items-center gap-2 mb-4 text-indigo-600">
               <GraduationCap size={24} /> Education
             </h3>
             {education.map((e) => (
-              <div key={e.title} className="bg-white p-5 rounded-xl shadow-sm border border-slate-100 hover:border-blue-200 transition-all">
+              <div key={e.title} className="bg-indigo-800/20
+               p-5 rounded-xl shadow-sm   hover:border-blue-200 transition-all">
                 <p className="font-bold text-slate-800">{e.title}</p>
-                <p className="text-slate-500 text-sm mt-1">{e.sub}</p>
+                <p className="text-slate-700 text-sm mt-1">{e.sub}</p>
               </div>
             ))}
           </div>
 
           {/* Background Column */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold flex items-center gap-2 mb-4 text-blue-600">
+            <h3 className="text-xl font-semibold flex items-center gap-2 mb-4 text-indigo-600">
               <History size={24} /> Professional Journey
             </h3>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 h-full">
+            <div className="text-indigo-800/45 p-9 rounded-xl shadow-sm bg-indigo-800/20 h-full">
               <ul className="space-y-4">
                 {background.map((b, i) => (
-                  <li key={i} className="flex gap-3 text-slate-600 text-sm leading-relaxed">
-                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 shrink-0" />
+                  <li key={i} className="flex gap-3 text-slate-800 text-sm leading-relaxed">
+                    <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2 shrink-0" />
                     {b}
                   </li>
                 ))}
