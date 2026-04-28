@@ -15,7 +15,7 @@ export const projects: Project[] = [
       "Storefront app with real-time product filtering, persistent cart via localStorage, custom auth validation, and mobile-first Tailwind UI. Migrated from JS to TypeScript with strict data modeling.",
     tags: ["React", "TypeScript", "Context API", "Tailwind CSS", "localStorage", "React Router"],
     projCategory: "Frontend",
-    github: "https://resherif.github.io/E-commerce-website/",
+    github: "https://e-commercee-website.netlify.app/",
   },
   {
     title: "Admin Analytics Dashboard",
